@@ -1,6 +1,6 @@
 import { Train, Building, Briefcase, MapIcon } from 'lucide-react';
 import { motion } from 'motion/react';
-import InteractiveMap from './InteractiveMap';
+import locationImg from '../assets/images/regenerated_image_1780887626735.png';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export default function Location() {
@@ -75,9 +75,13 @@ export default function Location() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="rounded-3xl shadow-xl h-full min-h-[500px]"
+            className="rounded-3xl overflow-hidden shadow-xl h-full min-h-[500px]"
           >
-            <InteractiveMap />
+            <img 
+              src={locationImg} 
+              alt="Singapore Transit" 
+              className="object-cover w-full h-full grayscale-[20%] sepia-[10%] opacity-90"
+            />
           </motion.div>
 
         </div>
