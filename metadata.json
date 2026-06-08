@@ -1,0 +1,6 @@
+{
+  "name": "Lucerne Grand",
+  "description": "Landing page for the upcoming Lucerne Grand residential development by City Developments Limited. A lake and mountain inspired architectural marvel.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
