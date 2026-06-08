@@ -24,11 +24,11 @@ export default function FloorPlans() {
   ];
 
   return (
-    <section className="py-24 bg-[#EBE8E3] text-[#1C1C1C] border-t border-[#1C1C1C]/10">
+    <section id="floorplans" className="py-24 bg-[#EBE8E3] text-[#1C1C1C] border-t border-[#1C1C1C]/10">
       <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-24">
         
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -57,13 +57,16 @@ export default function FloorPlans() {
           className="grid md:grid-cols-3 gap-8"
         >
           {floorPlans.map((plan, i) => (
-            <motion.div 
+            <motion.a 
               key={i} 
+              href="https://wa.me/6598581998?text=I%20would%20like%20to%20get%20the%20latest%20floor%20plans%20for%20Lucerne%20Grand"
+              target="_blank"
+              rel="noopener noreferrer"
               variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
               }}
-              className="bg-white border border-[#1C1C1C]/10 rounded-2xl overflow-hidden flex flex-col group shadow-sm hover:shadow-xl transition-shadow duration-500"
+              className="bg-white border border-[#1C1C1C]/10 rounded-2xl overflow-hidden flex flex-col group shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 cursor-pointer"
             >
               <div className="p-8 border-b border-[#1C1C1C]/5 bg-white z-20 flex-1">
                 <h4 className="font-serif text-2xl text-[#1C1C1C] mb-2">{plan.title}</h4>
@@ -100,8 +103,25 @@ export default function FloorPlans() {
                     <p className="text-[10px] text-[#1C1C1C]/60 mt-1 uppercase tracking-widest">{t("Coming Soon ")}</p>
                   </div>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          className="mt-16 text-center"
+        >
+          <a
+            href="https://wa.me/6598581998?text=I%20would%20like%20to%20get%20the%20latest%20floor%20plans%20for%20Lucerne%20Grand"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center bg-[#1C1C1C] text-white hover:bg-[#8C7355] transition-colors py-4 px-10 rounded-full font-bold text-[14px] uppercase tracking-widest shadow-md"
+          >
+            {t("Click to Enquire")}
+          </a>
         </motion.div>
 
       </div>

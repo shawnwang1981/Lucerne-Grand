@@ -7,9 +7,9 @@ export default function Contact() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-24 bg-white text-[#1C1C1C] relative border-t border-[#1C1C1C]/10">
+    <section id="contact" className="py-24 bg-white text-[#1C1C1C] relative border-t border-[#1C1C1C]/10">
       <motion.div 
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8, ease: "easeOut" }}

@@ -85,6 +85,7 @@ const translations: Record<string, string> = {
   "3 Bedroom": "3 卧室",
   "4 Bedroom": "4 卧室",
   "View Details": "查看详情",
+  "Click to Enquire": "点击咨询",
 
   // Developer
   "The Developer": "开发商",
@@ -121,6 +122,10 @@ const translations: Record<string, string> = {
 
   // Floating CTA
   "WhatsApp Us": "WhatsApp 我们",
+
+  // Nav
+  "Location": "位置",
+  "Contact": "联系我们",
 
   // Global Replace
   "Lucerne": "琉森 (Lucerne)",

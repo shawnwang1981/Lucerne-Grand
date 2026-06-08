@@ -13,7 +13,7 @@ export default function Lifestyle() {
       
       <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-24 relative z-10 flex flex-col items-center text-center space-y-12">
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -62,8 +62,8 @@ export default function Lifestyle() {
              <motion.div 
                key={index} 
                variants={{
-                 hidden: { opacity: 0, y: 20 },
-                 visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+                 hidden: { opacity: 0, y: 40 },
+                 visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
                }}
                className="bg-white border border-[#1C1C1C]/10 p-8 rounded-2xl flex flex-col items-center text-center"
              >

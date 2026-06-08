@@ -7,14 +7,14 @@ export default function Location() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-24 bg-[#F7F5F2] text-[#1C1C1C]">
+    <section id="location" className="py-24 bg-[#F7F5F2] text-[#1C1C1C]">
       <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-24">
         
         <div className="grid lg:grid-cols-2 gap-16">
           
           <motion.div 
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="space-y-8"
@@ -71,8 +71,8 @@ export default function Location() {
           </motion.div>
 
           <motion.div 
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             className="rounded-3xl overflow-hidden shadow-xl h-full min-h-[500px]"
