@@ -1,8 +1,11 @@
 import { Train, Building, Briefcase, MapIcon } from 'lucide-react';
 import { motion } from 'motion/react';
-import locationImg from '../assets/images/regenerated_image_1780887626735.png';
+import InteractiveMap from './InteractiveMap';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function Location() {
+  const { t } = useLanguage();
+
   return (
     <section className="py-24 bg-[#F7F5F2] text-[#1C1C1C]">
       <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-24">
@@ -17,15 +20,15 @@ export default function Location() {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-[#8C7355] uppercase tracking-[0.3em] text-[11px] font-bold mb-4">Connectivity</h3>
+              <h3 className="text-[#8C7355] uppercase tracking-[0.3em] text-[11px] font-bold mb-4">{t("Connectivity")}</h3>
               <h2 className="text-4xl md:text-5xl font-serif text-[#1C1C1C] leading-tight">
-                Doorstep to <br />
-                <span className="italic text-[#8C7355]">Lakeside MRT</span>
+                {t("Doorstep to")} <br />
+                <span className="italic text-[#8C7355]">{t("Lakeside MRT")}</span>
               </h2>
             </div>
 
             <p className="text-[#1C1C1C]/60 text-lg leading-relaxed max-w-md">
-              Seamless access to Jurong East, the CBD and major interchanges.
+              {t("Seamless access to Jurong East, the CBD and major interchanges.")}
             </p>
 
             <div className="flex items-center space-x-4 mb-8">
@@ -46,22 +49,22 @@ export default function Location() {
               <div className="flex space-x-6">
                 <Building className="w-8 h-8 text-[#8C7355] shrink-0" />
                 <div>
-                  <h4 className="text-xl font-medium text-[#1C1C1C] mb-2">To Jurong East / JLD</h4>
-                  <p className="text-[#1C1C1C]/60 leading-relaxed">Fast access to the West's key interchange and Singapore's next major business district. JLD - Jurong Lake District</p>
+                  <h4 className="text-xl font-medium text-[#1C1C1C] mb-2">{t("To Jurong East / JLD")}</h4>
+                  <p className="text-[#1C1C1C]/60 leading-relaxed">{t("Fast access to the West's key interchange and Singapore's next major business district. JLD - Jurong Lake District")}</p>
                 </div>
               </div>
               <div className="flex space-x-6">
                 <Briefcase className="w-8 h-8 text-[#8C7355] shrink-0" />
                 <div>
-                  <h4 className="text-xl font-medium text-[#1C1C1C] mb-2">To the CBD</h4>
-                  <p className="text-[#1C1C1C]/60 leading-relaxed">Direct East-West Line connectivity makes city commuting straightforward.</p>
+                  <h4 className="text-xl font-medium text-[#1C1C1C] mb-2">{t("To the CBD")}</h4>
+                  <p className="text-[#1C1C1C]/60 leading-relaxed">{t("Direct East-West Line connectivity makes city commuting straightforward.")}</p>
                 </div>
               </div>
               <div className="flex space-x-6">
                 <MapIcon className="w-8 h-8 text-[#8C7355] shrink-0" />
                 <div>
-                  <h4 className="text-xl font-medium text-[#1C1C1C] mb-2">To the wider island</h4>
-                  <p className="text-[#1C1C1C]/60 leading-relaxed">Well-linked to major rail interchanges and expressways.</p>
+                  <h4 className="text-xl font-medium text-[#1C1C1C] mb-2">{t("To the wider island")}</h4>
+                  <p className="text-[#1C1C1C]/60 leading-relaxed">{t("Well-linked to major rail interchanges and expressways.")}</p>
                 </div>
               </div>
             </div>
@@ -72,13 +75,9 @@ export default function Location() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="rounded-3xl overflow-hidden shadow-xl h-full min-h-[500px]"
+            className="rounded-3xl shadow-xl h-full min-h-[500px]"
           >
-            <img 
-              src={locationImg} 
-              alt="Singapore Transit" 
-              className="object-cover w-full h-full grayscale-[20%] sepia-[10%] opacity-90"
-            />
+            <InteractiveMap />
           </motion.div>
 
         </div>

@@ -1,8 +1,11 @@
 import { MessageCircle, Building2 } from 'lucide-react';
 import { projectData } from '../data';
 import { motion } from 'motion/react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function Contact() {
+  const { t } = useLanguage();
+
   return (
     <section className="py-24 bg-white text-[#1C1C1C] relative border-t border-[#1C1C1C]/10">
       <motion.div 
@@ -15,11 +18,11 @@ export default function Contact() {
         
         <div className="space-y-4">
           <h2 className="text-4xl md:text-6xl font-serif text-[#1C1C1C]">
-            Ready to explore <br />
-            <span className="text-[#8C7355] italic font-light">Lucerne Grand?</span>
+            {t("Ready to explore")} <br />
+            <span className="text-[#8C7355] italic font-light">{t("Lucerne Grand?")}</span>
           </h2>
           <p className="text-xl text-[#1C1C1C]/60 font-light pt-6">
-            Get the latest preview updates, pricing guidance, floor plans and buyer insights directly from the developer sales team.
+            {t("Get the latest preview updates, pricing guidance, floor plans and buyer insights directly from the developer sales team.")}
           </p>
         </div>
 
@@ -38,10 +41,10 @@ export default function Contact() {
           <div className="relative z-10 space-y-8">
             <div className="space-y-2">
               <h3 className="text-[10px] uppercase tracking-[0.3em] font-bold text-[#8C7355]">
-                VIP Preview
+                {t("VIP Preview")}
               </h3>
               <p className="text-2xl font-serif text-[#1C1C1C] leading-snug">
-                Register your interest now!
+                {t("Register your interest now!")}
               </p>
             </div>
             
@@ -52,13 +55,13 @@ export default function Contact() {
               className="flex items-center justify-center w-full bg-[#1C1C1C] text-white hover:bg-[#8C7355] transition-colors py-4 rounded-full font-bold text-[14px] uppercase tracking-widest shadow-md mt-8"
             >
               <MessageCircle className="w-5 h-5 mr-3" />
-              WhatsApp Us
+              {t("WhatsApp Us")}
             </a>
           </div>
         </motion.div>
 
         <p className="text-[#1C1C1C]/40 text-sm max-w-2xl mx-auto">
-          Reach out for the latest information and to secure your preview appointment.
+          {t("Reach out for the latest information and to secure your preview appointment.")}
         </p>
 
       </motion.div>

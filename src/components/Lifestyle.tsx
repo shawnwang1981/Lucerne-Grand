@@ -1,7 +1,10 @@
 import { TreePine, Footprints, Sun } from 'lucide-react';
 import { motion } from 'motion/react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function Lifestyle() {
+  const { t } = useLanguage();
+
   return (
     <section className="py-24 bg-[#EBE8E3] text-[#1C1C1C] overflow-hidden relative">
       <div className="absolute inset-0 z-0 opacity-[0.03]"
@@ -16,13 +19,13 @@ export default function Lifestyle() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="space-y-6 max-w-2xl"
         >
-          <h3 className="text-[#8C7355] uppercase tracking-[0.3em] text-[11px] font-bold">Lifestyle</h3>
+          <h3 className="text-[#8C7355] uppercase tracking-[0.3em] text-[11px] font-bold">{t("Lifestyle")}</h3>
           <h2 className="text-4xl md:text-6xl font-serif text-[#1C1C1C]">
-            One minute to <br/>
-            <span className="text-[#8C7355] italic font-light">Jurong Lake Gardens</span>
+            {t("One minute to")} <br/>
+            <span className="text-[#8C7355] italic font-light">{t("Jurong Lake Gardens")}</span>
           </h2>
           <p className="text-[#1C1C1C]/60 text-lg md:text-xl font-light">
-            A rare part of the Lucerne Grand story is the ability to step out and be moments from one of Singapore's most impressive green escapes.
+            {t("A rare part of the Lucerne Grand story is the ability to step out and be moments from one of Singapore's most impressive green escapes.")}
           </p>
         </motion.div>
 
@@ -42,18 +45,18 @@ export default function Lifestyle() {
           {[
             {
               icon: TreePine,
-              title: "Jurong Lake Gardens",
-              desc: "Singapore's 90-hectare national garden in the heartlands"
+              title: t("Jurong Lake Gardens"),
+              desc: t("Singapore's 90-hectare national garden in the heartlands")
             },
             {
               icon: Footprints,
-              title: "Daily Wellness",
-              desc: "Morning jogs, evening walks and fresh air become part of daily life."
+              title: t("Daily Wellness"),
+              desc: t("Morning jogs, evening walks and fresh air become part of daily life.")
             },
             {
               icon: Sun,
-              title: "Family Moments",
-              desc: "Open lawns, water features and garden spaces make weekends more meaningful."
+              title: t("Family Moments"),
+              desc: t("Open lawns, water features and garden spaces make weekends more meaningful.")
             }
           ].map((item, index) => (
              <motion.div 

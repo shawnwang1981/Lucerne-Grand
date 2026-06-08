@@ -1,25 +1,28 @@
 import { Lock } from 'lucide-react';
 import { motion } from 'motion/react';
-
-const floorPlans = [
-  { 
-    title: "2-Bedroom", 
-    size: "620 - 710 sqft",
-    types: ["2-Bedroom (2 Bath)", "2-Bedroom + Study"]
-  },
-  { 
-    title: "3-Bedroom", 
-    size: "870 - 1,000 sqft",
-    types: ["3-Bedroom", "3-Bedroom Premium + Study"]
-  },
-  { 
-    title: "4-Bedroom", 
-    size: "1,140 - 1,430 sqft",
-    types: ["4-Bedroom Premium", "4-Bedroom Premium + Study", "4-Bedroom Premium + Entertainment"]
-  },
-];
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function FloorPlans() {
+  const { t } = useLanguage();
+
+  const floorPlans = [
+    { 
+      title: t("2-Bedroom"), 
+      size: "620 - 710 sqft",
+      types: [t("2-Bedroom (2 Bath)"), t("2-Bedroom + Study")]
+    },
+    { 
+      title: t("3-Bedroom"), 
+      size: "870 - 1,000 sqft",
+      types: [t("3-Bedroom"), t("3-Bedroom Premium + Study")]
+    },
+    { 
+      title: t("4-Bedroom"), 
+      size: "1,140 - 1,430 sqft",
+      types: [t("4-Bedroom Premium"), t("4-Bedroom Premium + Study"), t("4-Bedroom Premium + Entertainment")]
+    },
+  ];
+
   return (
     <section className="py-24 bg-[#EBE8E3] text-[#1C1C1C] border-t border-[#1C1C1C]/10">
       <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-24">
@@ -31,12 +34,12 @@ export default function FloorPlans() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center mb-16 space-y-4"
         >
-          <h3 className="text-[#8C7355] uppercase tracking-[0.3em] text-[11px] font-bold">The Residence</h3>
+          <h3 className="text-[#8C7355] uppercase tracking-[0.3em] text-[11px] font-bold">{t("The Residence")}</h3>
           <h2 className="text-4xl md:text-5xl font-serif text-[#1C1C1C]">
-            Unit Mix & Floor Plans
+            {t("Unit Mix & Floor Plans")}
           </h2>
           <p className="text-[#1C1C1C]/60 text-lg max-w-2xl mx-auto font-light">
-            A thoughtfully curated selection of bespoke residences, designed for those who seek the harmony of architectural precision and natural serenity.
+            {t("A thoughtfully curated selection of bespoke residences, designed for those who seek the harmony of architectural precision and natural serenity.")}
           </p>
         </motion.div>
 
@@ -66,10 +69,10 @@ export default function FloorPlans() {
                 <h4 className="font-serif text-2xl text-[#1C1C1C] mb-2">{plan.title}</h4>
                 <p className="text-[#8C7355] text-sm uppercase tracking-widest font-bold mb-6 block">{plan.size}</p>
                 <ul className="space-y-3">
-                  {plan.types.map((t, idx) => (
+                  {plan.types.map((type, idx) => (
                     <li key={idx} className="flex items-start text-sm text-[#1C1C1C]/70">
                       <span className="text-[#8C7355] mr-2">•</span>
-                      {t}
+                      {type}
                     </li>
                   ))}
                 </ul>
@@ -93,8 +96,8 @@ export default function FloorPlans() {
                   
                   <div className="relative z-10 flex flex-col items-center justify-center bg-white/90 backdrop-blur-md p-6 rounded-xl border border-[#1C1C1C]/10 shadow-lg text-center min-w-[200px] transform group-hover:-translate-y-1 transition-transform duration-300">
                     <Lock className="w-6 h-6 text-[#8C7355] mb-3" />
-                    <p className="font-bold text-[11px] uppercase tracking-[0.2em] text-[#1C1C1C]">Draft Floor Plan</p>
-                    <p className="text-[10px] text-[#1C1C1C]/60 mt-1 uppercase tracking-widest">Coming Soon</p>
+                    <p className="font-bold text-[11px] uppercase tracking-[0.2em] text-[#1C1C1C]">{t("Draft Floor Plan")}</p>
+                    <p className="text-[10px] text-[#1C1C1C]/60 mt-1 uppercase tracking-widest">{t("Coming Soon ")}</p>
                   </div>
               </div>
             </motion.div>

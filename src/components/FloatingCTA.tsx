@@ -1,10 +1,12 @@
 import { MessageCircle } from 'lucide-react';
 import { motion, useScroll, useMotionValueEvent } from 'motion/react';
 import { useState } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function FloatingCTA() {
   const { scrollY } = useScroll();
   const [isVisible, setIsVisible] = useState(false);
+  const { t } = useLanguage();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (latest > 600) {
@@ -28,7 +30,7 @@ export default function FloatingCTA() {
         className="flex items-center justify-center bg-[#8C7355] text-white hover:bg-[#1C1C1C] transition-colors py-3 px-4 md:py-4 md:px-6 rounded-full font-bold text-[12px] md:text-[14px] uppercase tracking-widest shadow-2xl group"
       >
         <MessageCircle className="w-5 h-5 md:mr-3 group-hover:scale-110 transition-transform" />
-        <span className="hidden md:inline">WhatsApp Us</span>
+        <span className="hidden md:inline">{t("WhatsApp Us")}</span>
       </a>
     </motion.div>
   );

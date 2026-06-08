@@ -14,21 +14,26 @@ import FactSheet from './components/FactSheet';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import FloatingCTA from './components/FloatingCTA';
+import Header from './components/Header';
+import { LanguageProvider } from './contexts/LanguageContext';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#F7F5F2] text-[#1C1C1C] font-sans antialiased selection:bg-[#8C7355]/30 overflow-x-hidden">
-      <Hero />
-      <KeySellingPoints />
-      <Lifestyle />
-      <Galleria />
-      <Location />
-      <FloorPlans />
-      <Developer />
-      <FactSheet />
-      <Contact />
-      <Footer />
-      <FloatingCTA />
-    </div>
+    <LanguageProvider>
+      <div className="min-h-screen bg-[#F7F5F2] text-[#1C1C1C] font-sans antialiased selection:bg-[#8C7355]/30 overflow-x-hidden">
+        <Header />
+        <Hero />
+        <KeySellingPoints />
+        <Lifestyle />
+        <Galleria />
+        <Location />
+        <FloorPlans />
+        <Developer />
+        <FactSheet />
+        <Contact />
+        <Footer />
+        <FloatingCTA />
+      </div>
+    </LanguageProvider>
   );
 }
