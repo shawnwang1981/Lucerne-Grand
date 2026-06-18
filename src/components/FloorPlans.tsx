@@ -1,4 +1,4 @@
-import { Lock } from 'lucide-react';
+import { Lock, MessageCircle } from 'lucide-react';
 import { motion } from 'motion/react';
 import { useLanguage } from '../contexts/LanguageContext';
 
@@ -118,9 +118,11 @@ export default function FloorPlans() {
             href="https://wa.me/6598581998?text=I%20would%20like%20to%20get%20the%20latest%20floor%20plans%20for%20Lucerne%20Grand"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center bg-[#1C1C1C] text-white hover:bg-[#8C7355] transition-colors py-4 px-10 rounded-full font-bold text-[14px] uppercase tracking-widest shadow-md"
+            className="group relative inline-flex items-center justify-center bg-[#1C1C1C] text-white hover:bg-[#8C7355] transition-colors duration-300 py-4 px-10 rounded-full font-bold text-[14px] uppercase tracking-widest shadow-xl overflow-hidden"
           >
-            {t("Click to Enquire")}
+            <div className="absolute inset-0 bg-white/10 w-0 group-hover:w-full transition-all duration-500 ease-out"></div>
+            <MessageCircle className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform relative z-10" />
+            <span className="relative z-10">{t("Click to Enquire")}</span>
           </a>
         </motion.div>
 
