@@ -7,10 +7,10 @@ export default function Hero() {
   const { t, language } = useLanguage();
 
   return (
-    <section className="relative h-[90vh] flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-[100svh] md:min-h-[90vh] flex items-center justify-center overflow-hidden pt-20">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 z-0 bg-cover bg-center md:bg-cover md:bg-center bg-no-repeat"
         style={{ backgroundImage: 'url("https://ik.imagekit.io/pawwhere/jlg/jurong-lake-district.png")' }}
       >
         <div className="absolute inset-0 bg-[#F7F5F2]/10" />

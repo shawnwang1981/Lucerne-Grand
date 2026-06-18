@@ -14,7 +14,7 @@ export default function Contact() {
         <img 
           src={contactBg} 
           alt="Contact Background" 
-          className="w-full h-full object-cover opacity-90"
+          className="w-full h-full object-cover object-center sm:object-center opacity-90"
         />
         <div className="absolute inset-0 bg-[#1C1C1C]/60 backdrop-blur-[2px]"></div>
       </div>

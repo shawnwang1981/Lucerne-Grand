@@ -7,8 +7,8 @@ export default function Lifestyle() {
 
   return (
     <section className="py-24 bg-[#EBE8E3] text-[#1C1C1C] overflow-hidden relative">
-      <div className="absolute inset-0 z-0 opacity-[0.03]"
-           style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1542385151-efd9000785a0?auto=format&fit=crop&w=1920&q=80")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }} 
+      <div className="absolute inset-0 z-0 opacity-[0.03] bg-cover bg-center md:bg-fixed"
+           style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1542385151-efd9000785a0?auto=format&fit=crop&w=1920&q=80")' }} 
       />
       
       <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-24 relative z-10 flex flex-col items-center text-center space-y-12">
