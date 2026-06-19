@@ -18,7 +18,7 @@ export default function Developer() {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-[#8C7355] uppercase tracking-[0.3em] text-[11px] font-bold mb-4">{t("The Developer")}</h3>
+              <h3 className="text-[#8C7355] uppercase tracking-[0.3em] text-xs sm:text-sm font-bold mb-4">{t("The Developer")}</h3>
               <h2 className="text-4xl md:text-5xl font-serif text-[#1C1C1C] leading-tight">
                 {t("City Developments Limited (CDL)")}
               </h2>
@@ -36,12 +36,12 @@ export default function Developer() {
               <div className="flex flex-col space-y-3">
                 <Globe className="w-6 h-6 text-[#8C7355]" />
                 <h4 className="text-lg font-medium text-[#1C1C1C]">{t("Global Presence")}</h4>
-                <p className="text-sm text-[#1C1C1C]/60">{t("143 locations across 28 countries and regions.")}</p>
+                <p className="text-sm md:text-base text-[#1C1C1C]/60">{t("143 locations across 28 countries and regions.")}</p>
               </div>
               <div className="flex flex-col space-y-3">
                 <Award className="w-6 h-6 text-[#8C7355]" />
                 <h4 className="text-lg font-medium text-[#1C1C1C]">{t("Trusted Legacy")}</h4>
-                <p className="text-sm text-[#1C1C1C]/60">{t("Over 60 years of proven track record and excellence.")}</p>
+                <p className="text-sm md:text-base text-[#1C1C1C]/60">{t("Over 60 years of proven track record and excellence.")}</p>
               </div>
             </div>
           </motion.div>

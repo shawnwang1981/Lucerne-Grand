@@ -20,7 +20,7 @@ export default function Location() {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-[#8C7355] uppercase tracking-[0.3em] text-[11px] font-bold mb-4">{t("Connectivity")}</h3>
+              <h3 className="text-[#8C7355] uppercase tracking-[0.3em] text-xs sm:text-sm font-bold mb-4">{t("Connectivity")}</h3>
               <h2 className="text-4xl md:text-5xl font-serif text-[#1C1C1C] leading-tight">
                 {t("Doorstep to")} <br />
                 <span className="italic text-[#8C7355]">{t("Lakeside MRT")}</span>

@@ -17,7 +17,7 @@ export default function FactSheet() {
         className="max-w-7xl mx-auto px-6 sm:px-12"
       >
         <div className="text-center mb-16">
-          <h3 className="text-[#8C7355] uppercase tracking-[0.3em] text-[11px] font-bold mb-4">{t("Fact Sheet")}</h3>
+          <h3 className="text-[#8C7355] uppercase tracking-[0.3em] text-xs sm:text-sm font-bold mb-4">{t("Fact Sheet")}</h3>
           <h2 className="text-3xl md:text-4xl font-serif text-[#1C1C1C]">{t("Name Rationale for Lucerne Grand")}</h2>
         </div>
 
@@ -63,7 +63,7 @@ export default function FactSheet() {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
           className="bg-[#F7F5F2] rounded-2xl shadow-sm border border-[#1C1C1C]/10 p-6 sm:p-8 md:p-12"
         >
-          <p className="uppercase tracking-widest text-[10px] font-bold text-[#1C1C1C]/40 mb-2">{t("Developer")}</p>
+          <p className="uppercase tracking-widest text-xs sm:text-sm font-bold text-[#1C1C1C]/40 mb-2">{t("Developer")}</p>
           <p className="font-medium text-base sm:text-lg mb-8">
             {t("CDL POLARIS PROPERTIES PTE. LTD (LUCERNE GRAND)")}<br/>
             {t("CDL POLARIS COMMERCIAL PTE. LTD (LUCERNE GALLERIA)")}

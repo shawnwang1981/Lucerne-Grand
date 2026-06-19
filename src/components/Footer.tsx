@@ -6,7 +6,7 @@ export default function Footer() {
   const { t, language } = useLanguage();
 
   return (
-    <footer className="bg-[#F7F5F2] text-[#1C1C1C]/40 py-12 text-center text-[10px] border-t border-[#1C1C1C]/10">
+    <footer className="bg-[#F7F5F2] text-[#1C1C1C]/40 py-12 text-center text-xs sm:text-sm border-t border-[#1C1C1C]/10">
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

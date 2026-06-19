@@ -40,7 +40,7 @@ export default function KeySellingPoints() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="space-y-6"
           >
-            <h3 className="text-[#8C7355] uppercase tracking-[0.3em] text-[11px] font-bold">{t("Overview")}</h3>
+            <h3 className="text-[#8C7355] uppercase tracking-[0.3em] text-xs sm:text-sm font-bold">{t("Overview")}</h3>
             <h2 className="text-4xl md:text-5xl font-serif leading-tight">
               {t("Why")} <br /> <span className="text-[#1C1C1C]">{t("Lucerne Grand")}</span> <br /> 
               <span className="text-[#8C7355] italic font-light">{t("stands out")}</span>
@@ -77,7 +77,7 @@ export default function KeySellingPoints() {
                 </div>
                 <div>
                   <h4 className="text-lg font-medium text-[#1C1C1C] mb-2">{item.title}</h4>
-                  <p className="text-sm text-[#1C1C1C]/60 leading-relaxed">{item.description}</p>
+                  <p className="text-sm md:text-base text-[#1C1C1C]/60 leading-relaxed">{item.description}</p>
                 </div>
               </motion.div>
             ))}

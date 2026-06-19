@@ -26,7 +26,7 @@ export default function Galleria() {
           className="space-y-10"
         >
           <div>
-            <h3 className="text-[#8C7355] uppercase tracking-[0.3em] text-[11px] font-bold mb-4">{t("Rare Proposition")}</h3>
+            <h3 className="text-[#8C7355] uppercase tracking-[0.3em] text-xs sm:text-sm font-bold mb-4">{t("Rare Proposition")}</h3>
             <h2 className="text-4xl md:text-5xl font-serif text-[#1C1C1C] leading-tight uppercase">
               {t("A Rare Lakeside")}<br />{t("Launch With")}<br />
               <span className="italic text-[#8C7355] capitalize">{t("Convenience")}</span><br />
@@ -59,7 +59,7 @@ export default function Galleria() {
               ].map((text, i) => (
                 <div key={i} className="flex flex-col space-y-3">
                   <CheckCircle className="w-5 h-5 text-[#8C7355]" />
-                  <p className="text-sm text-[#1C1C1C]/60">{t(text)}</p>
+                  <p className="text-sm md:text-base text-[#1C1C1C]/60">{t(text)}</p>
                 </div>
               ))}
             </div>
@@ -84,7 +84,7 @@ export default function Galleria() {
             <div className="absolute inset-0 bg-gradient-to-t from-[#1C1C1C]/80 via-[#1C1C1C]/20 to-transparent pointer-events-none" />
             <div className="absolute bottom-8 left-8 text-white">
               <h3 className="text-2xl font-serif tracking-widest text-white uppercase">{t("Lucerne")}</h3>
-              <p className="tracking-[0.3em] text-white/80 uppercase text-sm">{t("Galleria")}</p>
+              <p className="tracking-[0.3em] text-white/80 uppercase text-xs md:text-sm">{t("Galleria")}</p>
             </div>
           </div>
         </motion.div>

@@ -25,7 +25,7 @@ export default function Hero() {
         transition={{ duration: 1.2, ease: "easeOut", delay: 0.1 }}
         className="relative z-10 flex flex-col items-center text-center px-6 max-w-4xl mx-auto space-y-8 tracking-wide"
       >
-        <h3 className="text-[#8C7355] uppercase tracking-[0.3em] text-[11px] font-bold">
+        <h3 className="text-[#8C7355] uppercase tracking-[0.3em] text-xs sm:text-sm font-bold">
           {t("A New Landmark Is Rising")}
         </h3>
         
@@ -38,9 +38,9 @@ export default function Hero() {
           </h2>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center gap-3 md:gap-4 text-xs md:text-sm font-medium">
+        <div className="flex flex-col sm:flex-row items-center gap-3 md:gap-4 text-sm md:text-base font-medium">
           <div className="flex items-center px-4 py-2 bg-white/80 backdrop-blur border border-[#1C1C1C]/10 rounded-full text-[#1C1C1C] shadow-sm">
-            <span className="bg-[#8C7355] text-white px-2 py-0.5 rounded text-[10px] font-bold mr-2 uppercase tracking-widest">{t("MRT")}</span>
+            <span className="bg-[#8C7355] text-white px-2 py-0.5 rounded text-xs font-bold mr-2 uppercase tracking-widest">{t("MRT")}</span>
             {projectData.mrt}
           </div>
           <div className="flex items-center px-4 py-2 bg-white/80 backdrop-blur border border-[#1C1C1C]/10 rounded-full text-[#1C1C1C] shadow-sm">
@@ -50,7 +50,7 @@ export default function Hero() {
         </div>
 
         <div className="pt-12">
-          <p className="text-[10px] text-[#1C1C1C]/40 uppercase tracking-widest mb-2">{t("Seeking Indication Of Interest")}</p>
+          <p className="text-xs sm:text-sm text-[#1C1C1C]/40 uppercase tracking-widest mb-2">{t("Seeking Indication Of Interest")}</p>
           <p className="text-3xl md:text-4xl text-[#8C7355] font-serif uppercase">{t("Coming Soon ")}{projectData.launch}</p>
         </div>
       </motion.div>

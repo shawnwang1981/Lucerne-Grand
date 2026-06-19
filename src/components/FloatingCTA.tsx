@@ -41,7 +41,7 @@ export default function FloatingCTA() {
           href="https://wa.me/6598581998?text=I%20am%20interested%20in%20Lucerne%20Grand"
           target="_blank"
           rel="noopener noreferrer"
-          className="relative flex items-center justify-center bg-[#8C7355] text-white hover:bg-[#1C1C1C] transition-all duration-300 py-3 px-4 md:py-4 md:px-6 rounded-full font-bold text-[12px] md:text-[14px] uppercase tracking-widest shadow-xl group border border-white/20"
+          className="relative flex items-center justify-center bg-[#8C7355] text-white hover:bg-[#1C1C1C] transition-all duration-300 py-3 px-4 md:py-4 md:px-6 rounded-full font-bold text-sm md:text-base uppercase tracking-widest shadow-xl group border border-white/20"
         >
           <MessageCircle className="w-5 h-5 md:mr-3 group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300" />
           <span className="hidden md:inline">{t("WhatsApp Us")}</span>

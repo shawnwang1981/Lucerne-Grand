@@ -46,7 +46,7 @@ export default function Header() {
         <div className="flex items-center gap-4 ml-auto md:ml-0">
           <button
             onClick={toggleLanguage}
-            className="flex items-center gap-2 px-4 py-2 rounded-full border border-[#1C1C1C]/10 bg-white/50 backdrop-blur hover:bg-[#F7F5F2] transition-colors text-[13px] font-medium text-[#1C1C1C]"
+            className="flex items-center gap-2 px-4 py-2 rounded-full border border-[#1C1C1C]/10 bg-white/50 backdrop-blur hover:bg-[#F7F5F2] transition-colors text-sm font-medium text-[#1C1C1C]"
           >
             <Globe className="w-4 h-4 text-[#8C7355]" />
             <span className={language === 'en' ? 'font-bold' : ''}>EN</span>

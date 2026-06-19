@@ -34,7 +34,7 @@ export default function FloorPlans() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center mb-16 space-y-4"
         >
-          <h3 className="text-[#8C7355] uppercase tracking-[0.3em] text-[11px] font-bold">{t("The Residence")}</h3>
+          <h3 className="text-[#8C7355] uppercase tracking-[0.3em] text-xs sm:text-sm font-bold">{t("The Residence")}</h3>
           <h2 className="text-4xl md:text-5xl font-serif text-[#1C1C1C]">
             {t("Unit Mix & Floor Plans")}
           </h2>
@@ -70,10 +70,10 @@ export default function FloorPlans() {
             >
               <div className="p-8 border-b border-[#1C1C1C]/5 bg-white z-20 flex-1">
                 <h4 className="font-serif text-2xl text-[#1C1C1C] mb-2">{plan.title}</h4>
-                <p className="text-[#8C7355] text-sm uppercase tracking-widest font-bold mb-6 block">{plan.size}</p>
+                <p className="text-[#8C7355] text-sm md:text-base uppercase tracking-widest font-bold mb-6 block">{plan.size}</p>
                 <ul className="space-y-3">
                   {plan.types.map((type, idx) => (
-                    <li key={idx} className="flex items-start text-sm text-[#1C1C1C]/70">
+                    <li key={idx} className="flex items-start text-sm md:text-base text-[#1C1C1C]/70">
                       <span className="text-[#8C7355] mr-2">•</span>
                       {type}
                     </li>
@@ -99,8 +99,8 @@ export default function FloorPlans() {
                   
                   <div className="relative z-10 flex flex-col items-center justify-center bg-white/90 backdrop-blur-md p-6 rounded-xl border border-[#1C1C1C]/10 shadow-lg text-center min-w-[200px] transform group-hover:-translate-y-1 transition-transform duration-300">
                     <Lock className="w-6 h-6 text-[#8C7355] mb-3" />
-                    <p className="font-bold text-[11px] uppercase tracking-[0.2em] text-[#1C1C1C]">{t("Draft Floor Plan")}</p>
-                    <p className="text-[10px] text-[#1C1C1C]/60 mt-1 uppercase tracking-widest">{t("Coming Soon ")}</p>
+                    <p className="font-bold text-xs uppercase tracking-[0.2em] text-[#1C1C1C]">{t("Draft Floor Plan")}</p>
+                    <p className="text-xs text-[#1C1C1C]/60 mt-1 uppercase tracking-widest">{t("Coming Soon ")}</p>
                   </div>
               </div>
             </motion.a>
