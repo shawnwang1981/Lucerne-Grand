@@ -170,21 +170,28 @@ export default function Contact() {
 
                   <div className="space-y-2 relative">
                     <label htmlFor="message" className="text-xs font-semibold uppercase tracking-widest text-[#1C1C1C]/60">{t("Enquiries")}</label>
-                    <select 
-                      id="message"
-                      required
-                      value={formData.message}
-                      onChange={(e) => setFormData({...formData, message: e.target.value})}
-                      className="w-full bg-white border border-[#1C1C1C]/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-[#8C7355] focus:ring-1 focus:ring-[#8C7355] transition-all"
-                    >
-                      <option value="" disabled>{t("Select an option")}</option>
-                      <option value="interested in 2 bedder">{t("interested in 2 bedder")}</option>
-                      <option value="interested in 3 bedder">{t("interested in 3 bedder")}</option>
-                      <option value="interested in 4 bedder">{t("interested in 4 bedder")}</option>
-                      <option value="interested in floorplans">{t("interested in floorplans")}</option>
-                      <option value="interested in updated pricing">{t("interested in updated pricing")}</option>
-                      <option value="interested in ebook">{t("interested in ebook")}</option>
-                    </select>
+                    <div className="relative">
+                      <select 
+                        id="message"
+                        required
+                        value={formData.message}
+                        onChange={(e) => setFormData({...formData, message: e.target.value})}
+                        className="w-full bg-white border border-[#1C1C1C]/10 rounded-lg px-4 py-3 pr-10 text-sm focus:outline-none focus:border-[#8C7355] focus:ring-1 focus:ring-[#8C7355] transition-all appearance-none"
+                      >
+                        <option value="" disabled>{t("Select an option")}</option>
+                        <option value="interested in 2 bedder">{t("interested in 2 bedder")}</option>
+                        <option value="interested in 3 bedder">{t("interested in 3 bedder")}</option>
+                        <option value="interested in 4 bedder">{t("interested in 4 bedder")}</option>
+                        <option value="interested in floorplans">{t("interested in floorplans")}</option>
+                        <option value="interested in updated pricing">{t("interested in updated pricing")}</option>
+                        <option value="interested in ebook">{t("interested in ebook")}</option>
+                      </select>
+                      <div className="absolute top-1/2 right-4 -translate-y-1/2 pointer-events-none text-[#1C1C1C]/40">
+                        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                      </div>
+                    </div>
                   </div>
 
                   <button 
