@@ -3,7 +3,7 @@ import { projectData } from '../data';
 import { motion } from 'motion/react';
 import { useLanguage } from '../contexts/LanguageContext';
 import contactBg from '../assets/images/contact_bg_1781749466480.jpg';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 export default function Contact() {
   const { t } = useLanguage();
@@ -36,7 +36,7 @@ export default function Contact() {
       <div className="absolute inset-0 z-0">
         <img 
           src={contactBg} 
-          alt="Contact Background" 
+          alt="Contact Lucerne Grand 荟瑞星 - VIP Preview at Jurong Lake District" 
           className="w-full h-full object-cover object-center sm:object-center opacity-90"
         />
         <div className="absolute inset-0 bg-[#1C1C1C]/70 backdrop-blur-[4px]"></div>

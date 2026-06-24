@@ -78,7 +78,7 @@ export default function Galleria() {
             <motion.img 
               style={{ y, scale: 1.3 }}
               src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80" 
-              alt="Grocery" 
+              alt="Lucerne Galleria Retail and Grocery - Jurong Lake District Convenience" 
               className="object-cover w-full h-full transform-origin-center"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1C1C1C]/80 via-[#1C1C1C]/20 to-transparent pointer-events-none" />

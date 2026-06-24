@@ -49,7 +49,7 @@ export default function FactSheet() {
           >
             <img 
               src={rationaleImg} 
-              alt="Lucerne Grand Rationale Architecture" 
+              alt="Lucerne Grand 荟瑞星 Architectural Rationale - CDL Luxury Condo" 
               className="w-full h-auto object-cover aspect-[4/3]"
               referrerPolicy="no-referrer"
             />

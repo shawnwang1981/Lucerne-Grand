@@ -79,7 +79,7 @@ export default function Location() {
           >
             <img 
               src={locationImg} 
-              alt="Singapore Transit" 
+              alt="Jurong Lake District Connectivity Map - Lakeside MRT to Lucerne Grand" 
               className="object-cover w-full h-full grayscale-[20%] sepia-[10%] opacity-90"
             />
           </motion.div>

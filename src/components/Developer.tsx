@@ -61,7 +61,7 @@ export default function Developer() {
                      <div className="bg-[#F7F5F2] px-10 py-16 rounded-2xl shadow-2xl flex items-center justify-center border border-[#1C1C1C]/10 w-[95%] max-w-[550px]">
                        <img 
                          src="https://iili.io/CKgFyUQ.webp" 
-                         alt="City Developments Limited (CDL) Logo" 
+                         alt="City Developments Limited (CDL) Logo - Developer of Lucerne Grand" 
                          className="max-h-[140px] md:max-h-[180px] w-full object-contain"
                        />
                      </div>
