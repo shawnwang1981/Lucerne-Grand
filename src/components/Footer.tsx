@@ -19,6 +19,9 @@ export default function Footer() {
         <p className="max-w-2xl mx-auto leading-relaxed">
           {t("Disclaimer: This is an independent information portal. Information provided is for general reference only and may be subject to change without prior notice. While every effort has been made to ensure the accuracy of the information presented, the creator assumes no responsibility for any errors or omissions.")}
         </p>
+        <p className="max-w-2xl mx-auto leading-relaxed mt-4">
+          Advertised by Wang Jiarong from Huttons Asia Ltd, CEA R071966A
+        </p>
         <p className="pt-8 block">© {new Date().getFullYear()} {language === 'zh' ? projectData.chineseName : projectData.name}. {t("All rights reserved.")}</p>
       </motion.div>
     </footer>
