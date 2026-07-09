@@ -11,6 +11,7 @@ import Location from './components/Location';
 import FloorPlans from './components/FloorPlans';
 import Developer from './components/Developer';
 import FactSheet from './components/FactSheet';
+import Pricing from './components/Pricing';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import FloatingCTA from './components/FloatingCTA';
@@ -30,6 +31,7 @@ export default function App() {
         <FloorPlans />
         <Developer />
         <FactSheet />
+        <Pricing />
         <Contact />
         <Footer />
         <FloatingCTA />

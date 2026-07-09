@@ -31,7 +31,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-32 relative border-t border-[#1C1C1C]/10 overflow-hidden">
+    <section id="register" className="py-32 relative border-t border-[#1C1C1C]/10 overflow-hidden">
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
         <img 

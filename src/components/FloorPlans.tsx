@@ -24,7 +24,7 @@ export default function FloorPlans() {
   ];
 
   return (
-    <section id="floorplans" className="py-24 bg-[#EBE8E3] text-[#1C1C1C] border-t border-[#1C1C1C]/10">
+    <section id="floor-plans" className="py-24 bg-[#EBE8E3] text-[#1C1C1C] border-t border-[#1C1C1C]/10">
       <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-24">
         
         <motion.div 

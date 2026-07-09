@@ -115,6 +115,17 @@ const translations: Record<string, string> = {
   " BLOCKS OF ": " 栋 ",
   "-STOREY RESIDENTIAL DEVELOPMENT WITH COMMERCIAL AT 1ST STOREY.": " 层住宅，一层为商业用途。",
 
+  // Pricing
+  "Indicative Pricing": "参考价格",
+  "Attractive Launch Prices": "极具吸引力的首发价格",
+  "Get the latest pricing updates and receive exclusive early-bird discounts when you register for our VVIP Preview.": "注册我们的 VIP 贵宾预览，获取最新价格更新并享受独家早鸟优惠。",
+  "Price List": "价格表",
+  "Detailed pricing for 2-bedroom to 4-bedroom premium units will be available closer to the launch date.": "两居室至四居室高级单位的详细定价将在临近发售日期时公布。",
+  "Register for updates": "注册获取更新",
+  "Launch Alerts": "发售提醒",
+  "Be the first to know when the official prices are released and secure your preferred unit.": "在正式价格发布时第一时间获取通知，锁定您心仪的单位。",
+  "Get Notified": "获取通知",
+
   // Contact
   "Ready to explore": "准备好探索",
   "Get the latest preview updates, pricing guidance, floor plans and buyer insights directly from the developer sales team.": "直接从开发商销售团队获取最新的预览更新、定价指导、平面图和买家见解。",
