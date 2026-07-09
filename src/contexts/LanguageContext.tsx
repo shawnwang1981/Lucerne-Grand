@@ -18,6 +18,11 @@ const translations: Record<string, string> = {
 
   // Key Selling Points
   "Overview": "项目概览",
+  "Location": "地理位置",
+  "Pricing": "参考价格",
+  "Register": "登记意向",
+  "VVIP Register": "贵宾登记",
+  "Privacy Policy": "隐私政策",
   "Why": "为何",
   "Lucerne Grand": "琉森嘉园",
   "stands out": "脱颖而出",
@@ -158,7 +163,6 @@ const translations: Record<string, string> = {
   "WhatsApp Us": "WhatsApp 我们",
 
   // Nav
-  "Location": "位置",
   "Contact": "联系我们",
 
   // Global Replace

@@ -35,8 +35,11 @@ export default function Contact() {
     window.location.href = mailtoUrl;
     
     setStatus('success');
+  };
+
+  const resetForm = () => {
     setFormData({ name: '', email: '', phone: '', message: '' });
-    setTimeout(() => setStatus('idle'), 5000);
+    setStatus('idle');
   };
 
   return (
@@ -129,11 +132,21 @@ export default function Contact() {
                 <motion.div 
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="flex flex-col items-center justify-center text-center py-12 space-y-4"
+                  className="flex flex-col items-center justify-center text-center py-12 space-y-6"
                 >
                   <CheckCircle2 className="w-16 h-16 text-[#8C7355]" />
-                  <h4 className="text-2xl font-serif text-[#1C1C1C]">{t("Thank You")}</h4>
-                  <p className="text-[#1C1C1C]/60">{t("Your registration has been received. We will contact you shortly.")}</p>
+                  <div className="space-y-2">
+                    <h4 className="text-2xl font-serif text-[#1C1C1C]">{t("Thank You")}</h4>
+                    <p className="text-[#1C1C1C]/60 text-sm max-w-sm">
+                      {t("Your registration has been received. We will contact you shortly with floor plans and pricing updates.")}
+                    </p>
+                  </div>
+                  <button
+                    onClick={resetForm}
+                    className="px-6 py-2.5 bg-transparent border border-[#1C1C1C]/10 hover:border-[#8C7355] text-xs uppercase tracking-widest font-semibold rounded-full text-[#1C1C1C]/60 hover:text-[#8C7355] transition-all cursor-pointer"
+                  >
+                    {t("Submit Another Registration")}
+                  </button>
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
@@ -203,10 +216,17 @@ export default function Contact() {
                     </div>
                   </div>
 
+                  {/* PDPA consent and Google Ads PPC compliance disclosure */}
+                  <div className="text-[10px] sm:text-xs text-[#1C1C1C]/50 leading-relaxed pt-2 border-t border-[#1C1C1C]/5 space-y-1">
+                    <p>
+                      {t("By clicking 'Submit Details', you consent to Shawn Wang (Huttons Asia Ltd) collecting, using, and disclosing your personal data to contact you via Call/SMS/WhatsApp/Email with pricing updates, floor plans, and VIP showflat previews for Lucerne Grand, in compliance with the Singapore Personal Data Protection Act (PDPA).")}
+                    </p>
+                  </div>
+
                   <button 
                     type="submit"
                     disabled={status === 'submitting'}
-                    className="w-full bg-[#1C1C1C] text-white hover:bg-[#8C7355] transition-colors py-4 rounded-xl font-bold text-[13px] uppercase tracking-widest shadow-md flex items-center justify-center disabled:opacity-70 mt-4"
+                    className="w-full bg-[#1C1C1C] text-white hover:bg-[#8C7355] transition-colors py-4 rounded-xl font-bold text-[13px] uppercase tracking-widest shadow-md flex items-center justify-center disabled:opacity-70 mt-4 cursor-pointer"
                   >
                     {status === 'submitting' ? (
                       <span className="flex items-center">
