@@ -20,21 +20,32 @@ export default function Contact() {
     setStatus('submitting');
     
     // Google Ads conversion tracking
+    let isTrackingComplete = false;
+    
+    const proceedWithSubmission = () => {
+      if (isTrackingComplete) return;
+      isTrackingComplete = true;
+      
+      const text = `Hi, I am interested in Lucerne Grand. Here are my details:\n\nName: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nEnquiries: ${formData.message || 'N/A'}`;
+      const encodedText = encodeURIComponent(text);
+      const mailtoUrl = `mailto:contact@shawnsgproperty.com?subject=${encodeURIComponent("Enquiry for Lucerne Grand")}&body=${encodedText}`;
+      
+      window.location.href = mailtoUrl;
+      setStatus('success');
+    };
+
     if (typeof (window as any).gtag === 'function') {
       (window as any).gtag('event', 'conversion', {
         'send_to': 'AW-18267610181/HJhJCOeL2cQcEMW41oZE',
         'value': 1.0,
-        'currency': 'SGD'
+        'currency': 'SGD',
+        'event_callback': proceedWithSubmission
       });
+      // Fallback in case gtag doesn't fire the callback
+      setTimeout(proceedWithSubmission, 1000);
+    } else {
+      proceedWithSubmission();
     }
-    
-    const text = `Hi, I am interested in Lucerne Grand. Here are my details:\n\nName: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nEnquiries: ${formData.message || 'N/A'}`;
-    const encodedText = encodeURIComponent(text);
-    const mailtoUrl = `mailto:contact@shawnsgproperty.com?subject=${encodeURIComponent("Enquiry for Lucerne Grand")}&body=${encodedText}`;
-    
-    window.location.href = mailtoUrl;
-    
-    setStatus('success');
   };
 
   const resetForm = () => {
