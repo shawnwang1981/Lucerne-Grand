@@ -3,7 +3,7 @@ import { projectData } from '../data';
 import { motion } from 'motion/react';
 import { useLanguage } from '../contexts/LanguageContext';
 import contactBg from '../assets/images/contact_bg_1781749466480.jpg';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function Contact() {
   const { t } = useLanguage();
@@ -15,37 +15,30 @@ export default function Contact() {
   });
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
 
+  // Trigger Google Ads conversion tracking when the 'Thank You' state is rendered
+  useEffect(() => {
+    if (status === 'success' && typeof (window as any).gtag === 'function') {
+      (window as any).gtag('event', 'conversion', {
+        'send_to': 'AW-18267610181/HJhJCOeL2cQcEMW41oZE',
+        'value': 1.0,
+        'currency': 'SGD'
+      });
+    }
+  }, [status]);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('submitting');
     
-    // Google Ads conversion tracking
-    let isTrackingComplete = false;
+    const text = `Hi, I am interested in Lucerne Grand. Here are my details:\n\nName: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nEnquiries: ${formData.message || 'N/A'}`;
+    const encodedText = encodeURIComponent(text);
+    const mailtoUrl = `mailto:contact@shawnsgproperty.com?subject=${encodeURIComponent("Enquiry for Lucerne Grand")}&body=${encodedText}`;
     
-    const proceedWithSubmission = () => {
-      if (isTrackingComplete) return;
-      isTrackingComplete = true;
-      
-      const text = `Hi, I am interested in Lucerne Grand. Here are my details:\n\nName: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nEnquiries: ${formData.message || 'N/A'}`;
-      const encodedText = encodeURIComponent(text);
-      const mailtoUrl = `mailto:contact@shawnsgproperty.com?subject=${encodeURIComponent("Enquiry for Lucerne Grand")}&body=${encodedText}`;
-      
-      window.location.href = mailtoUrl;
-      setStatus('success');
-    };
-
-    if (typeof (window as any).gtag === 'function') {
-      (window as any).gtag('event', 'conversion', {
-        'send_to': 'AW-18267610181/HJhJCOeL2cQcEMW41oZE',
-        'value': 1.0,
-        'currency': 'SGD',
-        'event_callback': proceedWithSubmission
-      });
-      // Fallback in case gtag doesn't fire the callback
-      setTimeout(proceedWithSubmission, 1000);
-    } else {
-      proceedWithSubmission();
-    }
+    // Open mailto link
+    window.location.href = mailtoUrl;
+    
+    // Show success page (which will trigger the conversion tracking via useEffect)
+    setStatus('success');
   };
 
   const resetForm = () => {
