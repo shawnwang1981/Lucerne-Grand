@@ -1,30 +1,21 @@
-import { MessageCircle, Building2, Send, CheckCircle2 } from 'lucide-react';
+import { MessageCircle, Building2, Send } from 'lucide-react';
 import { projectData } from '../data';
 import { motion } from 'motion/react';
 import { useLanguage } from '../contexts/LanguageContext';
 import contactBg from '../assets/images/contact_bg_1781749466480.jpg';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Contact() {
   const { t } = useLanguage();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     message: ''
   });
-  const [status, setStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
-
-  // Trigger Google Ads conversion tracking when the 'Thank You' state is rendered
-  useEffect(() => {
-    if (status === 'success' && typeof (window as any).gtag === 'function') {
-      (window as any).gtag('event', 'conversion', {
-        'send_to': 'AW-18267610181/HJhJCOeL2cQcEMW41oZE',
-        'value': 1.0,
-        'currency': 'SGD'
-      });
-    }
-  }, [status]);
+  const [status, setStatus] = useState<'idle' | 'submitting'>('idle');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -37,8 +28,10 @@ export default function Contact() {
     // Open mailto link
     window.location.href = mailtoUrl;
     
-    // Show success page (which will trigger the conversion tracking via useEffect)
-    setStatus('success');
+    // Navigate to thank you page
+    setTimeout(() => {
+      navigate('/thank-you');
+    }, 500);
   };
 
   const resetForm = () => {
@@ -132,30 +125,9 @@ export default function Contact() {
                 </p>
               </div>
 
-              {status === 'success' ? (
-                <motion.div 
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="flex flex-col items-center justify-center text-center py-12 space-y-6"
-                >
-                  <CheckCircle2 className="w-16 h-16 text-[#8C7355]" />
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div className="grid sm:grid-cols-2 gap-5">
                   <div className="space-y-2">
-                    <h4 className="text-2xl font-serif text-[#1C1C1C]">{t("Thank You")}</h4>
-                    <p className="text-[#1C1C1C]/60 text-sm max-w-sm">
-                      {t("Your registration has been received. We will contact you shortly with floor plans and pricing updates.")}
-                    </p>
-                  </div>
-                  <button
-                    onClick={resetForm}
-                    className="px-6 py-2.5 bg-transparent border border-[#1C1C1C]/10 hover:border-[#8C7355] text-xs uppercase tracking-widest font-semibold rounded-full text-[#1C1C1C]/60 hover:text-[#8C7355] transition-all cursor-pointer"
-                  >
-                    {t("Submit Another Registration")}
-                  </button>
-                </motion.div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-5">
-                  <div className="grid sm:grid-cols-2 gap-5">
-                    <div className="space-y-2">
                       <label htmlFor="name" className="text-xs font-semibold uppercase tracking-widest text-[#1C1C1C]/60">{t("Name")}</label>
                       <input 
                         type="text" 
@@ -245,9 +217,8 @@ export default function Contact() {
                     )}
                   </button>
                 </form>
-              )}
-            </div>
-          </motion.div>
+              </div>
+            </motion.div>
 
         </div>
 
